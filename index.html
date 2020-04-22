@@ -4,140 +4,140 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Power Grid Frequency Data</title>
-    <script src="./docs/external/js/highlight.pack.js"></script>
-    <link rel="stylesheet" href="./docs/external/styles/vs2015.css" />
-    <link rel="stylesheet" href="./docs/style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap" rel="stylesheet">
-    <script>
-      hljs.initHighlightingOnLoad();
-    </script>
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
-      });
-    </script>
-    <script
-      type="text/javascript"
-      async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"
-    ></script>
-    <script src="./docs/src/enumerate.js"></script>
-    <script src="./docs/src/imgCenterize.js"></script>
-
-    
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .branch {
+        margin: 10px;
+        margin-left: 30px;
+      }
+      .branch-name {
+        margin-left: 10px;
+      }
+      .node-header {
+        display: flex;
+        flex-direction: row;
+      }
+      .expand-button {
+        border: 0px;
+        cursor: pointer;
+        border-radius: 5px;
+        outline: none;
+      }
+      .expand-button:hover {
+        background: aliceblue;
+      }
+      .fold {
+        display: none;
+      }
+      .unfold {
+        display: block;
+      }
+    </style>
   </head>
   <body>
-    <div class="nav">
-      <div class="logo">Power Grid frequency Data</div>
-      <ul class="nav-link-ul">
-        <li class="nav-links"><a href="https://github.com/LRydin/Power-Grid-Frequency"> GitHub</a></li>
-        <li class="nav-links">
-          <a href="https://www.transnetbw.com/en/energy-market/ancillary-services/control-reserve-demand-activation"
-            >TransNet BW</a
-          >
-        </li>
-        <li class="nav-links"><a href="https://github.com/LRydin/Power-Grid-Frequency-Data">Data Upload</a></li>
-        <li class="nav-links"><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-    <div class="tocContainer">
-      <div class="tocHeading">Table of Content</div>
-      <div class="sidebar"></div>
-    </div>
+    <div id="tree"></div>
 
-    <div class="container">
+    <script>
+      const treeData = [
+        {
+          name: "Germany",
+          type: "folder",
+          children: [
+            {
+              name: "2019",
+              type: "folder",
+              children: [
+                { name: "January", type: "file", downloadURL: "www.google.com" },
+                { name: "February", type: "file", downloadURL: "www.google.com" },
+                { name: "March", type: "file", downloadURL: "www.google.com" },
+              ],
+            },
+            {
+              name: "2017",
+              type: "folder",
+              children: [
+                { name: "January", type: "file", downloadURL: "https://www.prothomalo.com/" },
+                { name: "February", type: "file", downloadURL: "https://www.facebook.com/" },
+                { name: "March", type: "file", downloadURL: "https://github.com/" },
+              ],
+            },
+          ],
+        },
+      ];
+      const treeInDOM = document.getElementById("tree");
 
-<h1 data-headerNum="1"  id="powergridfrequencydata">Power-Grid-Frequency-Data</h1>
-<p>Power-grid frequency data from around the world, cleaned and processed for research usage</p>
-<p>The data is collected from the TSO's and is processed to remove dead recordings, spikes, and other naturally assumed bad measurements. The scripts that are used to clean the data are also included, for transparency.</p>
-<p>The</p>
-<h1 data-headerNum="2"  id="europeangrids">European Grids</h1>
-<p>Available are recording from the Continental Europe (UTCE) area: Germany, France.
-From Great Britain (United Kingdom). From the Nordic Grid, from Fingrid.</p>
-<h2 data-headerNum="2.1"  id="germanytransnetbw">Germany - TransNet BW</h2>
-<p>These recordings are obtained from the <a href="https://www.transnetbw.com/en/energy-market/ancillary-services/control-reserve-demand-activation">TransNet BW</a></p>
-<h1 data-headerNum="3"  id="todo">Todo</h1>
-<h3 data-headerNum="3.0.1"  id="scriptstocleandatatoinclude">Scripts to clean data to include</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align:center;">Germany</th>
-<th style="text-align:center;">France</th>
-<th style="text-align:center;">Great Britain</th>
-<th style="text-align:center;">Nordic Grid</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center;"><span class="cross">X</span></td>
-<td style="text-align:center;"><span class="cross">X</span></td>
-<td style="text-align:center;"><span class="cross">X</span></td>
-<td style="text-align:center;"><span class="cross">X</span></td>
-</tr>
-</tbody>
-</table>
-<h3 data-headerNum="3.0.2"  id="datatouploadstill">Data to upload still</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align:center;">Germany</th>
-<th style="text-align:center;">France</th>
-<th style="text-align:center;">Great Britain</th>
-<th style="text-align:center;">Nordic Grid</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center;"><span class="cross">X</span> 2019</td>
-<td style="text-align:center;"><span class="cross">X</span> 2019</td>
-<td style="text-align:center;"><span class="cross">X</span> 2019</td>
-<td style="text-align:center;"><span class="cross">X</span> 2019</td>
-</tr>
-<tr>
-<td style="text-align:center;"><span class="cross">X</span> 2018</td>
-<td style="text-align:center;"><span class="cross">X</span> 2018</td>
-<td style="text-align:center;"><span class="cross">X</span> 2018</td>
-<td style="text-align:center;"><span class="cross">X</span> 2018</td>
-</tr>
-<tr>
-<td style="text-align:center;"><span class="cross">X</span> 2017</td>
-<td style="text-align:center;"><span class="cross">X</span> 2017</td>
-<td style="text-align:center;"><span class="cross">X</span> 2017</td>
-<td style="text-align:center;"><span class="cross">X</span> 2017</td>
-</tr>
-<tr>
-<td style="text-align:center;"><span class="cross">X</span> 2016</td>
-<td style="text-align:center;"><span class="cross">X</span> 2016</td>
-<td style="text-align:center;"><span class="cross">X</span> 2016</td>
-<td style="text-align:center;"><span class="cross">X</span> 2016</td>
-</tr>
-<tr>
-<td style="text-align:center;"><span class="cross">X</span> 2015</td>
-<td style="text-align:center;"><span class="cross">X</span> 2015</td>
-<td style="text-align:center;"><span class="cross">X</span> 2015</td>
-<td style="text-align:center;"><span class="cross">X</span> 2015</td>
-</tr>
-<tr>
-<td style="text-align:center;"><span class="cross">X</span> 2014</td>
-<td style="text-align:center;"><span class="cross">X</span> 2014</td>
-<td style="text-align:center;"><span class="cross">X</span> 2014</td>
-<td style="text-align:center;"><span class="cross">X</span> 2014</td>
-</tr>
-</tbody>
-</table>
-<h1 data-headerNum="4"  id="changelog">Changelog</h1>
-<ul>
-<li>Version 0.3 - Moving to Github to produce a long-term repository.</li>
-<li>Version 0.2 - Moved to <a href="https://jugit.fz-juelich.de/">JuGit</a> server</li>
-<li>Version 0.1 - Initial construction based files on a <a href="https://www.sciebo.de/">Sciebo</a> folder</li>
-</ul>
-<h1 data-headerNum="5"  id="contributions">Contributions</h1>
-<p>If you have open data from power-grid system, be it frequency, voltages, load, consumption, models, we will welcome all contributions to enhance this database</p>
-<h2 data-headerNum="5.1"  id="affiliatedinstitutionsandcollaborators">Affiliated institutions and collaborators</h2>
-<p>This project came to life by Leonardo Rydin Gorjão in 2018 on a GitHub repository</p>
-<p>This project is supported by Dirk Witthaut.</p>
-<h3 data-headerNum="5.1.1"  id="funding">Funding</h3>
-<p>Helmholtz Association Initiative <em>Energy System 2050 - A Contribution of the Research Field Energy</em> and the grant No. VH-NG-1025.</p>  </div>
+      const traverse = (treeData, treeInDOM) => {
+        treeData.forEach((branch) => {
+          const node = document.createElement("div");
+          node.classList.add("branch");
+          const nodeHeader = document.createElement("div");
+          nodeHeader.classList.add("node-header");
+          const expandToggleButton = document.createElement("button");
+          expandToggleButton.classList.add("expand-button");
+          const branchName = document.createElement("div");
+          branchName.classList.add("branch-name");
+          branchName.innerHTML = branch.name;
 
-</body>
+          if (branch.type === "folder") {
+            expandToggleButton.innerHTML = "-";
+            nodeHeader.appendChild(expandToggleButton);
+            nodeHeader.appendChild(branchName);
+          } else if (branch.type === "file") {
+            const downloadLink = document.createElement("a");
+            downloadLink.appendChild(branchName);
+            downloadLink.href = branch.downloadURL;
+            nodeHeader.appendChild(downloadLink);
+          }
+          node.appendChild(nodeHeader);
+
+          // recursion
+          if (branch.type === "folder") {
+            traverse(branch.children, node);
+          }
+          treeInDOM.appendChild(node);
+        });
+      };
+
+      traverse(treeData, treeInDOM);
+
+      // click to fold or unfold
+      const expandToggleButtons = Array.from(document.querySelectorAll(".expand-button"));
+      expandToggleButtons.forEach((expandToggleButton) => {
+        expandToggleButton.addEventListener("click", handleFoldUnfold);
+      });
+
+      function handleFoldUnfold(event) {
+        const buttonContainerSiblings = getSiblings(event.target.parentElement);
+        console.log(buttonContainerSiblings);
+
+        if (event.target.innerHTML === "-") {
+          event.target.innerHTML = "+";
+          buttonContainerSiblings.forEach((branch) => {
+            branch.classList.remove("unfold");
+            branch.classList.add("fold");
+          });
+        } else {
+          event.target.innerHTML = "-";
+          buttonContainerSiblings.forEach((branch) => {
+            branch.classList.remove("fold");
+            branch.classList.add("unfold");
+          });
+        }
+      }
+
+      const getSiblings = (node) => {
+        const parent = node.parentElement;
+        const siblings = [];
+        const siblingsIncludingThis = Array.from(parent.children);
+        siblingsIncludingThis.forEach((sibling) => {
+          if (sibling !== node) {
+            siblings.push(sibling);
+          }
+        });
+        return siblings;
+      };
+    </script>
+  </body>
 </html>
