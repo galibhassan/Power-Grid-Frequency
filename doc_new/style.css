@@ -96,3 +96,15 @@ a {
 a:hover {
   color: rgb(116, 218, 243);
 }
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background: rgb(44, 47, 47);
+  border: 7px soid blue;
+}
+::-webkit-scrollbar-thumb {
+  background: #535757;
+  border-radius: 10px;
+}
