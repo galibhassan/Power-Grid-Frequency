@@ -1901,6 +1901,67 @@ const treeData = [
           },
         ],
       },
+
+      {
+        name: 2020,
+        type: "folder",
+        children: [
+          {
+            name: "January",
+            type: "folder",
+            children: [
+              {
+                name: "Data",
+                type: "file",
+                downloadURL:
+                  "https://github.com/LRydin/Power-Grid-Frequency-Data/blob/master/Continental%20Europe/Germany/2020/01/2020_01.csv.zip?raw=true",
+              },
+              {
+                name: "Plot",
+                type: "file",
+                downloadURL:
+                  "https://raw.githubusercontent.com/LRydin/Power-Grid-Frequency-Data/master/Continental%20Europe/Germany/2020/01/2020_01.png",
+              },
+            ],
+          },
+          {
+            name: "February",
+            type: "folder",
+            children: [
+              {
+                name: "Data",
+                type: "file",
+                downloadURL:
+                  "https://github.com/LRydin/Power-Grid-Frequency-Data/blob/master/Continental%20Europe/Germany/2020/02/2020_02.csv.zip?raw=true",
+              },
+              {
+                name: "Plot",
+                type: "file",
+                downloadURL:
+                  "https://raw.githubusercontent.com/LRydin/Power-Grid-Frequency-Data/master/Continental%20Europe/Germany/2020/02/2020_02.png",
+              },
+            ],
+          },
+          {
+            name: "March",
+            type: "folder",
+            children: [
+              {
+                name: "Data",
+                type: "file",
+                downloadURL:
+                  "https://github.com/LRydin/Power-Grid-Frequency-Data/blob/master/Continental%20Europe/Germany/2020/03/2020_03.csv.zip?raw=true",
+              },
+              {
+                name: "Plot",
+                type: "file",
+                downloadURL:
+                  "https://raw.githubusercontent.com/LRydin/Power-Grid-Frequency-Data/master/Continental%20Europe/Germany/2020/03/2020_03.png",
+              },
+            ],
+          },
+        ],
+      },
     ],
   },
 ];
