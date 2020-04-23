@@ -5,16 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Power Grid Frequency Data</title>
     <link rel="stylesheet" href="./treeStyle.css" />
-
-    <style>
-      * {
-        font-family: Arial, Helvetica, sans-serif;
-      }
-    </style>
+    <link rel="stylesheet" href="style.css" />
     <script src="./treeData.js"></script>
     <script src="./makeTree.js"></script>
   </head>
   <body>
-    <div id="tree"></div>
+    <nav>
+      <div class="logo">Power Grid Data</div>
+    </nav>
+    <div class="description"></div>
+    <div class="tree-container">
+      <div class="tree-heading">Download Area</div>
+      <div id="tree" class="tree"></div>
+    </div>
+    <div class="footer"></div>
   </body>
 </html>

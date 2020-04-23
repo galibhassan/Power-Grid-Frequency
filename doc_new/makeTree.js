@@ -21,6 +21,7 @@ window.addEventListener("load", function () {
         const expandButtons = Array.from(document.querySelectorAll(".expand-button"));
         expandButtons.forEach((expandToggleButton) => {
           expandToggleButton.innerHTML = "+";
+          expandToggleButton.classList.remove("not-expandable");
           expandToggleButton.classList.add("expandable");
         });
       }
@@ -46,6 +47,8 @@ window.addEventListener("load", function () {
 
       if (branch.type === "folder") {
         expandToggleButton.innerHTML = "-";
+        /*         expandToggleButton.classList.remove("expandable");
+        expandToggleButton.classList.add("not-expandable"); */
         nodeHeader.appendChild(expandToggleButton);
         nodeHeader.appendChild(branchName);
       } else if (branch.type === "file") {
@@ -70,8 +73,8 @@ window.addEventListener("load", function () {
 
     if (event.target.innerHTML === "-") {
       event.target.innerHTML = "+";
-      event.target.classList.add("expandable");
       event.target.classList.remove("not-expandable");
+      event.target.classList.add("expandable");
 
       buttonContainerSiblings.forEach((branch) => {
         branch.classList.remove("unfold");
