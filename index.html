@@ -22,18 +22,27 @@
       }
       .expand-button {
         border: 0px;
+        width: 20px;
+        height: 20px;
         cursor: pointer;
         border-radius: 5px;
         outline: none;
       }
       .expand-button:hover {
-        background: aliceblue;
+        background: rgb(70, 152, 223);
+        color: white;
       }
       .fold {
-        display: none;
+        opacity: 0;
+        z-index: -10;
+        margin-top: -25px;
+        transition: all 0.2s;
+        pointer-events: none;
       }
       .unfold {
         display: block;
+        opacity: 1;
+        transition: all 0.1s;
       }
     </style>
     <script src="./treeData.js"></script>
