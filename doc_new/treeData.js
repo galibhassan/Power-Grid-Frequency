@@ -1455,6 +1455,229 @@ const treeData = [
           },
         ],
       },
+
+      {
+        name: 2018,
+        type: "folder",
+        children: [
+          {
+            name: "January",
+            type: "folder",
+            children: [
+              {
+                name: "Data",
+                type: "file",
+                downloadURL:
+                  "https://github.com/LRydin/Power-Grid-Frequency-Data/blob/master/Continental%20Europe/Germany/2018/01/2018_01.csv.zip?raw=true",
+              },
+              {
+                name: "Plot",
+                type: "file",
+                downloadURL:
+                  "https://raw.githubusercontent.com/LRydin/Power-Grid-Frequency-Data/master/Continental%20Europe/Germany/2018/01/2018_01.png",
+              },
+            ],
+          },
+          {
+            name: "February",
+            type: "folder",
+            children: [
+              {
+                name: "Data",
+                type: "file",
+                downloadURL:
+                  "https://github.com/LRydin/Power-Grid-Frequency-Data/blob/master/Continental%20Europe/Germany/2018/02/2018_02.csv.zip?raw=true",
+              },
+              {
+                name: "Plot",
+                type: "file",
+                downloadURL:
+                  "https://raw.githubusercontent.com/LRydin/Power-Grid-Frequency-Data/master/Continental%20Europe/Germany/2018/02/2018_02.png",
+              },
+            ],
+          },
+          {
+            name: "March",
+            type: "folder",
+            children: [
+              {
+                name: "Data",
+                type: "file",
+                downloadURL:
+                  "https://github.com/LRydin/Power-Grid-Frequency-Data/blob/master/Continental%20Europe/Germany/2018/03/2018_03.csv.zip?raw=true",
+              },
+              {
+                name: "Plot",
+                type: "file",
+                downloadURL:
+                  "https://raw.githubusercontent.com/LRydin/Power-Grid-Frequency-Data/master/Continental%20Europe/Germany/2018/03/2018_03.png",
+              },
+            ],
+          },
+          {
+            name: "April",
+            type: "folder",
+            children: [
+              {
+                name: "Data",
+                type: "file",
+                downloadURL:
+                  "https://github.com/LRydin/Power-Grid-Frequency-Data/blob/master/Continental%20Europe/Germany/2018/04/2018_04.csv.zip?raw=true",
+              },
+              {
+                name: "Plot",
+                type: "file",
+                downloadURL:
+                  "https://raw.githubusercontent.com/LRydin/Power-Grid-Frequency-Data/master/Continental%20Europe/Germany/2018/04/2018_04.png",
+              },
+            ],
+          },
+          {
+            name: "May",
+            type: "folder",
+            children: [
+              {
+                name: "Data",
+                type: "file",
+                downloadURL:
+                  "https://github.com/LRydin/Power-Grid-Frequency-Data/blob/master/Continental%20Europe/Germany/2018/05/2018_05.csv.zip?raw=true",
+              },
+              {
+                name: "Plot",
+                type: "file",
+                downloadURL:
+                  "https://raw.githubusercontent.com/LRydin/Power-Grid-Frequency-Data/master/Continental%20Europe/Germany/2018/05/2018_05.png",
+              },
+            ],
+          },
+          {
+            name: "June",
+            type: "folder",
+            children: [
+              {
+                name: "Data",
+                type: "file",
+                downloadURL:
+                  "https://github.com/LRydin/Power-Grid-Frequency-Data/blob/master/Continental%20Europe/Germany/2018/06/2018_06.csv.zip?raw=true",
+              },
+              {
+                name: "Plot",
+                type: "file",
+                downloadURL:
+                  "https://raw.githubusercontent.com/LRydin/Power-Grid-Frequency-Data/master/Continental%20Europe/Germany/2018/06/2018_06.png",
+              },
+            ],
+          },
+          {
+            name: "July",
+            type: "folder",
+            children: [
+              {
+                name: "Data",
+                type: "file",
+                downloadURL:
+                  "https://github.com/LRydin/Power-Grid-Frequency-Data/blob/master/Continental%20Europe/Germany/2018/07/2018_07.csv.zip?raw=true",
+              },
+              {
+                name: "Plot",
+                type: "file",
+                downloadURL:
+                  "https://raw.githubusercontent.com/LRydin/Power-Grid-Frequency-Data/master/Continental%20Europe/Germany/2018/07/2018_07.png",
+              },
+            ],
+          },
+          {
+            name: "August",
+            type: "folder",
+            children: [
+              {
+                name: "Data",
+                type: "file",
+                downloadURL:
+                  "https://github.com/LRydin/Power-Grid-Frequency-Data/blob/master/Continental%20Europe/Germany/2018/08/2018_08.csv.zip?raw=true",
+              },
+              {
+                name: "Plot",
+                type: "file",
+                downloadURL:
+                  "https://raw.githubusercontent.com/LRydin/Power-Grid-Frequency-Data/master/Continental%20Europe/Germany/2018/08/2018_08.png",
+              },
+            ],
+          },
+          {
+            name: "September",
+            type: "folder",
+            children: [
+              {
+                name: "Data",
+                type: "file",
+                downloadURL:
+                  "https://github.com/LRydin/Power-Grid-Frequency-Data/blob/master/Continental%20Europe/Germany/2018/09/2018_09.csv.zip?raw=true",
+              },
+              {
+                name: "Plot",
+                type: "file",
+                downloadURL:
+                  "https://raw.githubusercontent.com/LRydin/Power-Grid-Frequency-Data/master/Continental%20Europe/Germany/2018/09/2018_09.png",
+              },
+            ],
+          },
+          {
+            name: "October",
+            type: "folder",
+            children: [
+              {
+                name: "Data",
+                type: "file",
+                downloadURL:
+                  "https://github.com/LRydin/Power-Grid-Frequency-Data/blob/master/Continental%20Europe/Germany/2018/10/2018_10.csv.zip?raw=true",
+              },
+              {
+                name: "Plot",
+                type: "file",
+                downloadURL:
+                  "https://raw.githubusercontent.com/LRydin/Power-Grid-Frequency-Data/master/Continental%20Europe/Germany/2018/10/2018_10.png",
+              },
+            ],
+          },
+          {
+            name: "November",
+            type: "folder",
+            children: [
+              {
+                name: "Data",
+                type: "file",
+                downloadURL:
+                  "https://github.com/LRydin/Power-Grid-Frequency-Data/blob/master/Continental%20Europe/Germany/2018/11/2018_11.csv.zip?raw=true",
+              },
+              {
+                name: "Plot",
+                type: "file",
+                downloadURL:
+                  "https://raw.githubusercontent.com/LRydin/Power-Grid-Frequency-Data/master/Continental%20Europe/Germany/2018/11/2018_11.png",
+              },
+            ],
+          },
+          {
+            name: "December",
+            type: "folder",
+            children: [
+              {
+                name: "Data",
+                type: "file",
+                downloadURL:
+                  "https://github.com/LRydin/Power-Grid-Frequency-Data/blob/master/Continental%20Europe/Germany/2018/12/2018_12.csv.zip?raw=true",
+              },
+              {
+                name: "Plot",
+                type: "file",
+                downloadURL:
+                  "https://raw.githubusercontent.com/LRydin/Power-Grid-Frequency-Data/master/Continental%20Europe/Germany/2018/12/2018_12.png",
+              },
+            ],
+          },
+        ],
+      },
     ],
   },
 ];
