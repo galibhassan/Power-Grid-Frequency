@@ -1,29 +1,36 @@
 window.addEventListener("load", function () {
   const treeInDOM = document.getElementById("tree");
-
+  const foldAllButtonContainer = document.querySelector(".fold-all-button-container");
   // ----------------fold all--------------------------
   const foldAllButton = document.createElement("button");
   foldAllButton.innerHTML = "Collapse All";
-  treeInDOM.appendChild(foldAllButton);
+  // treeInDOM.appendChild(foldAllButton);
+  foldAllButtonContainer.appendChild(foldAllButton);
+  //treeInDOM.appendChild(foldAllButton);
   foldAllButton.classList.add("fold-all-button");
   foldAllButton.addEventListener("click", handleFoldAllButton);
 
   function handleFoldAllButton(event) {
-    const tree = getSiblings(event.target);
+    // const tree = getSiblings(event.target);
+    const tree = Array.from(treeInDOM.children);
     traverseAndFold(tree);
+    makeAllCollapseButtonsExpandable();
   }
+
+  const makeAllCollapseButtonsExpandable = () => {
+    const expandButtons = Array.from(document.querySelectorAll(".expand-button"));
+    expandButtons.forEach((expandToggleButton) => {
+      expandToggleButton.innerHTML = "+";
+      expandToggleButton.classList.remove("not-expandable");
+      expandToggleButton.classList.add("expandable");
+    });
+  };
 
   const traverseAndFold = (tree) => {
     tree.forEach((branch) => {
       if (branch.parentElement.id !== "tree" && branch.classList.contains("branch")) {
         branch.classList.remove("unfold");
         branch.classList.add("fold");
-        const expandButtons = Array.from(document.querySelectorAll(".expand-button"));
-        expandButtons.forEach((expandToggleButton) => {
-          expandToggleButton.innerHTML = "+";
-          expandToggleButton.classList.remove("not-expandable");
-          expandToggleButton.classList.add("expandable");
-        });
       }
 
       if (branch.classList.contains("branch")) {
@@ -56,6 +63,8 @@ window.addEventListener("load", function () {
         downloadLink.classList.add("download-link");
         downloadLink.appendChild(branchName);
         downloadLink.href = branch.downloadURL;
+        downloadLink.target = "_blank";
+
         nodeHeader.appendChild(downloadLink);
       }
       node.appendChild(nodeHeader);
@@ -110,5 +119,6 @@ window.addEventListener("load", function () {
     expandToggleButton.addEventListener("click", handleFoldUnfold);
   });
 
-  //traverseAndFold(Array.from(treeInDOM.children));
+  traverseAndFold(Array.from(treeInDOM.children));
+  makeAllCollapseButtonsExpandable();
 });

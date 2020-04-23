@@ -31,13 +31,18 @@ nav {
 }
 #tree {
   color: rgb(144, 144, 144);
+  position: relative;
+  overflow: auto;
+}
+.fold-all-button-container {
+  margin: 20px;
 }
 .fold-all-button {
-  background-color: #191d1d;
+  background-color: #2f3333;
   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
   color: white;
-  position: sticky;
   margin-bottom: 10px;
+  top: 150px;
 }
 .expand-button {
   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.904);
@@ -53,20 +58,25 @@ nav {
 }
 .description {
   width: 70%;
-  color: rgb(235, 235, 215);
+  color: rgb(233, 233, 233);
   word-spacing: 0.4rem;
+  text-align: justify;
 }
 .description > p {
   margin: 20px;
   animation: 0.5s ease-in 0s 1 slideInFromLeft;
 }
 .tree-container {
-  grid-row: 2/3;
+  grid-row: 2/4;
   grid-column: 2/3;
   /* border: 1px solid rgb(116, 139, 177); */
-  overflow: auto;
+  /* overflow: auto; */
   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.5);
   background: #191d1d;
+}
+.tree-overflow-container {
+  overflow: auto;
+  height: 80%;
 }
 .tree-heading {
   display: flex;
@@ -81,12 +91,18 @@ nav {
 }
 .footer {
   grid-row: 3/4;
-  grid-column: 1/3;
-  background-color: #fdd76ecc;
+  grid-column: 1/2;
+  background-color: rgb(139, 66, 52);
+  z-index: 10;
 }
 
 .not-expandable {
-  background: #292c2c;
+  background: #4b5757;
+  color: white;
+}
+.expandable {
+  background: tomato;
+  color: white;
 }
 a {
   text-decoration: none;
@@ -113,4 +129,14 @@ a:hover {
   width: 100%;
   height: auto;
   margin-bottom: 10%;
+}
+
+.logo {
+  margin: 20px;
+  font-size: 1.5rem;
+  word-spacing: 0.5rem;
+  letter-spacing: 10px;
+}
+.white {
+  color: white;
 }

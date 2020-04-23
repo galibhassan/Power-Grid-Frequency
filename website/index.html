@@ -6,12 +6,13 @@
     <title>Power Grid Frequency Data</title>
     <link rel="stylesheet" href="./treeStyle.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./spinner.css" />
     <script src="./treeData.js"></script>
     <script src="./makeTree.js"></script>
   </head>
   <body>
     <nav>
-      <div class="logo">Power Grid Data</div>
+      <div class="logo">Power Grid <span class="white"> Frequency</span> Data</div>
     </nav>
     <div class="description-container">
       <div class="description">
@@ -25,11 +26,15 @@
           assumed bad measurements. The scripts that are used to clean the data are also available, for transparency.
           See the <a href="https://github.com/LRydin/Power-Grid-Frequency">github page</a> for sourcefiles.
         </p>
+        <p>The German data (1 sec recordings) are obtained from <a href="">TransnetBW</a></p>
       </div>
     </div>
     <div class="tree-container">
       <div class="tree-heading">Download Area</div>
-      <div id="tree" class="tree"></div>
+      <div class="fold-all-button-container"></div>
+      <div class="tree-overflow-container">
+        <div id="tree" class="tree"></div>
+      </div>
     </div>
     <div class="footer"></div>
   </body>
