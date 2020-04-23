@@ -1,4 +1,37 @@
 window.addEventListener("load", function () {
+  const treeInDOM = document.getElementById("tree");
+
+  // ----------------fold all--------------------------
+  const foldAllButton = document.createElement("button");
+  foldAllButton.innerHTML = "Collapse All";
+  treeInDOM.appendChild(foldAllButton);
+  foldAllButton.classList.add("fold-all-button");
+  foldAllButton.addEventListener("click", handleFoldAllButton);
+
+  function handleFoldAllButton(event) {
+    const tree = getSiblings(event.target);
+    traverseAndFold(tree);
+  }
+
+  const traverseAndFold = (tree) => {
+    tree.forEach((branch) => {
+      if (branch.parentElement.id !== "tree" && branch.classList.contains("branch")) {
+        branch.classList.remove("unfold");
+        branch.classList.add("fold");
+        const expandButtons = Array.from(document.querySelectorAll(".expand-button"));
+        expandButtons.forEach((expandToggleButton) => {
+          expandToggleButton.innerHTML = "+";
+          expandToggleButton.classList.add("expandable");
+        });
+      }
+
+      if (branch.classList.contains("branch")) {
+        traverseAndFold(Array.from(branch.children));
+      }
+    });
+  };
+  // ------------------------------------------
+
   const traverse = (treeData, treeInDOM) => {
     treeData.forEach((branch) => {
       const node = document.createElement("div");
@@ -17,6 +50,7 @@ window.addEventListener("load", function () {
         nodeHeader.appendChild(branchName);
       } else if (branch.type === "file") {
         const downloadLink = document.createElement("a");
+        downloadLink.classList.add("download-link");
         downloadLink.appendChild(branchName);
         downloadLink.href = branch.downloadURL;
         nodeHeader.appendChild(downloadLink);
@@ -36,12 +70,17 @@ window.addEventListener("load", function () {
 
     if (event.target.innerHTML === "-") {
       event.target.innerHTML = "+";
+      event.target.classList.add("expandable");
+      event.target.classList.remove("not-expandable");
+
       buttonContainerSiblings.forEach((branch) => {
         branch.classList.remove("unfold");
         branch.classList.add("fold");
       });
     } else {
       event.target.innerHTML = "-";
+      event.target.classList.remove("expandable");
+      event.target.classList.add("not-expandable");
       buttonContainerSiblings.forEach((branch) => {
         branch.classList.remove("fold");
         branch.classList.add("unfold");
@@ -61,11 +100,12 @@ window.addEventListener("load", function () {
     return siblings;
   };
 
-  const treeInDOM = document.getElementById("tree");
   traverse(treeData, treeInDOM);
   // click to fold or unfold
   const expandToggleButtons = Array.from(document.querySelectorAll(".expand-button"));
   expandToggleButtons.forEach((expandToggleButton) => {
     expandToggleButton.addEventListener("click", handleFoldUnfold);
   });
+
+  //traverseAndFold(Array.from(treeInDOM.children));
 });
