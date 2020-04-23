@@ -108,3 +108,9 @@ a:hover {
   background: #535757;
   border-radius: 10px;
 }
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10%;
+}
