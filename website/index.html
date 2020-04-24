@@ -14,21 +14,7 @@
     <nav>
       <div class="logo">Power Grid <span class="white"> Frequency</span> Data</div>
     </nav>
-    <div class="description-container">
-      <div class="description">
-        <img class="hero-image" src="./plot_web.png" alt="" />
-        <p>
-          This page presents an effort to bring Power-grid frequency data from around the world, cleaned and processed
-          for research usage.
-        </p>
-        <p>
-          The data is collected from the TSO's and is processed to remove dead recordings, spikes, and other naturally
-          assumed bad measurements. The scripts that are used to clean the data are also available, for transparency.
-          See the <a href="https://github.com/LRydin/Power-Grid-Frequency">github page</a> for sourcefiles.
-        </p>
-        <p>The German data (1 sec recordings) are obtained from <a href="">TransnetBW</a></p>
-      </div>
-    </div>
+
     <div class="tree-container">
       <div class="tree-heading">Download Area</div>
       <div class="fold-all-button-container"></div>
@@ -36,6 +22,83 @@
         <div id="tree" class="tree"></div>
       </div>
     </div>
-    <div class="footer"></div>
+
+    <div class="description-container">
+      <img class="hero-image" src="./plot_web.png" alt="" />
+      <div id="tab-content-home" class="description tab-content">
+        <h3>Home</h3>
+        <p>
+          This page presents an effort to bring Power-grid frequency data from around the world, cleaned and processed
+          for research usage.
+        </p>
+        <p>
+          The data is collected from the TSO's and is processed to remove dead recordings, spikes, and other naturally
+          assumed bad measurements. The scripts that are used to clean the data are also available, for transparency.
+          See the <a href="https://github.com/LRydin/Power-Grid-Frequency" target="_blank">github page</a> for
+          sourcefiles.
+        </p>
+        <p>
+          The German data (1 sec recordings) are obtained from
+          <a
+            href="https://www.transnetbw.com/en/energy-market/ancillary-services/control-reserve-demand-activation"
+            target="_blank"
+            >TransnetBW</a
+          >
+        </p>
+      </div>
+
+      <div id="tab-content-credits" class="description tab-content">
+        <h3>Credits</h3>
+        <p></p>
+
+        <p>
+          <span class="credit-criterion">Data Sanitization and github repository maintanance</span>
+          <br />
+          - Leonardo Rydin Gorjão
+        </p>
+
+        <p>
+          <span class="credit-criterion">Web implementation and maintanance</span>
+          <br />
+          - Galib Hassan
+        </p>
+
+        <h4>
+          Funding
+        </h4>
+        <p>
+          Helmholtz Association Initiative Energy System 2050 - A Contribution of the Research Field Energy and the
+          grant No. VH-NG-1025.
+        </p>
+      </div>
+
+      <div id="tab-content-contribute" class="description tab-content">
+        <h3>Contribute</h3>
+        <p>
+          If you have open data from power-grid system, be it frequency, voltages, load, consumption, models, we will
+          welcome all contributions to enhance this database.
+        </p>
+        <p>
+          A general contribution guideline can be found
+          <a href="https://github.com/LRydin/Power-Grid-Frequency-Data/blob/master/README.md" target="_blank">here</a>.
+        </p>
+        <p>Feel free to contact: <a href="mailto:leonardo.rydin@gmail.com">leonardo.rydin@gmail.com</a></p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="tabs">
+        <ul>
+          <li id="tab-link-home">Home</li>
+          <li id="tab-link-credits">Credits</li>
+          <li id="tab-link-contribute">Contribute</li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      const tabContentIds = ["tab-content-home", "tab-content-credits", "tab-content-contribute"];
+      const tabLinkIds = ["tab-link-home", "tab-link-credits", "tab-link-contribute"];
+    </script>
+    <script src="./tabs.js"></script>
   </body>
 </html>
