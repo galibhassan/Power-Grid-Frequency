@@ -43,11 +43,16 @@ nav {
   color: white;
   margin-bottom: 10px;
   top: 150px;
+  transition: all 1s;
+}
+.fold-all-button:hover {
+  background-color: #8b4234;
 }
 .expand-button {
   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.904);
   text-shadow: 1px 1px 3px #000;
 }
+
 .description-container {
   grid-row: 2/3;
   grid-column: 1/2;
